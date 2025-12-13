@@ -1,0 +1,24 @@
+{
+  "name": "bytes-of-cards-api",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Lucas-BRT/bytes-of-cards-api#readme",
+  "bugs": {
+    "url": "https://github.com/Lucas-BRT/bytes-of-cards-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-BRT/bytes-of-cards-api.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
