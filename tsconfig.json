@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // versão do JavaScript de saída
+    "module": "CommonJS", // formato de módulo para Node
+    "outDir": "./dist", // onde o JS será gerado
+    "rootDir": "./src", // onde estão os arquivos .ts
+    "esModuleInterop": true
+  }
+}
