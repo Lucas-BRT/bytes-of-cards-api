@@ -1,11 +1,21 @@
-import express from "express";
-const app = express();
-const port = 3000;
+import app from "./server";
+import db from "./database";
+import env from "./env";
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+async function main() {
+  try {
+    // testa se o banco subiu corretamente
+    await db.$queryRaw`SELECT 1`;
 
-app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`);
-});
+    app.listen(env.APP_PORT, () => {
+      console.log(`Listening on http://localhost:${env.APP_PORT}`);
+    });
+  } catch (error) {
+    console.error("Database connection failed!", error);
+    process.exit(1);
+  } finally {
+    await db.$disconnect();
+  }
+}
+
+main();
