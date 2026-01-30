@@ -1,0 +1,37 @@
+{
+  "name": "bytes-of-cards-api",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Lucas-BRT/bytes-of-cards-api#readme",
+  "bugs": {
+    "url": "https://github.com/Lucas-BRT/bytes-of-cards-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-BRT/bytes-of-cards-api.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/client": "^7.3.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.1",
+    "@types/pg": "^8.16.0",
+    "express": "^5.2.1",
+    "pg": "^8.17.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^7.3.0",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}
