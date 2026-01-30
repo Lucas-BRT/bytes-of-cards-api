@@ -1,0 +1,20 @@
+services:
+  db:
+    container_name: bytes-of-cards-db
+    image: postgres:18.0-alpine3.22
+    environment:
+      - POSTGRES_USER=$DATABASE_USER
+      - POSTGRES_PASSWORD=$DATABASE_PASSWORD
+      - POSTGRES_DB=$DATABASE_NAME
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $DATABASE_USER"]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+
+volumes:
+  data:
